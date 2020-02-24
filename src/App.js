@@ -19,12 +19,21 @@ class App extends React.Component {
       toDos: prevState.toDos.concat(toDo)
     }));
   };
+  handleCompleted = (toDoCompleted) => {
+    this.setState((prevState) => ({
+      toDos: prevState.toDos.filter((toDo) => toDoCompleted !== toDo)
+    }));
+  };
   render() {
     return (
       <div>
         <Header />
-        <AddToDo handleAddToDo={this.handleAddToDo} />
-        <ToDos />
+        <ToDos items={this.state.toDos} 
+          handleCompleted={this.handleCompleted}
+        />
+        <AddToDo 
+          handleAddToDo={this.handleAddToDo} 
+          />
       </div>
     )
   };

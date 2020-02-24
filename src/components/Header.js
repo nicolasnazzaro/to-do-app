@@ -3,8 +3,8 @@ import React from 'react';
 
 const Header = () => (
     <div>
-        <h1>To-Do</h1>
-        <h2>Subtitle</h2>
+        <h1>Simple To-Do List</h1>
+        <h2>Keep track of your daily tasks!</h2>
     </div>
 );
 

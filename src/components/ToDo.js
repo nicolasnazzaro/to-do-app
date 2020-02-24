@@ -1,9 +1,16 @@
 import React from 'react';
 
 
-const ToDo = () => (
+const ToDo = (props) => (
     <div>
-        <p>1. Todo</p>
+        <p>{props.count}. {props.toDo}</p>
+        <button 
+            onClick={(e) => {
+                props.handleCompleted(props.toDo);
+            }}
+        >
+            Completed
+        </button>
     </div>
 );
 
