@@ -6,7 +6,7 @@ const ToDo = (props) => (
         <p>{props.count}. {props.toDo}</p>
         <button 
             onClick={(e) => {
-                props.handleCompleted(props.toDo);
+                props.handleCompletedModal(props.toDo);
             }}
         >
             Completed

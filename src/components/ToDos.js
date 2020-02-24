@@ -10,9 +10,10 @@ const ToDos = (props) => (
             {
                 props.items.map((item, i) => (
                     <ToDo 
+                        key={item}
                         count={i + 1} 
                         toDo={item}
-                        handleCompleted={props.handleCompleted} 
+                        handleCompletedModal={props.handleCompletedModal} 
                     />
                 ))
             }
