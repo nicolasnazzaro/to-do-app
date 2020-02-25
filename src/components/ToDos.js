@@ -4,9 +4,11 @@ import ToDo from './ToDo';
 
 const ToDos = (props) => (
     <div>
-        <h3>Your To-Dos</h3>
+        <div className="widget-header">
+        <h3 className="widget-header__title">Your To-Dos</h3>
+        </div>
         <div>
-            {props.items.length === 0 && <p>You don't have any to-do in your list</p>}
+            {props.items.length === 0 && <p className="widget__message">You don't have any to-do in your list</p>}
             {
                 props.items.map((item, i) => (
                     <ToDo 

@@ -1,0 +1,23 @@
+// Add To-Do input
+.add-to-do{
+    display: flex;
+    padding: $m-size;
+}
+
+.add-to-do__input {
+    flex-grow: 1;
+    background-color: lighten($off-white, 20%);
+    border: none;
+    border-bottom: .3rem solid $off-white;
+    margin-right: $s-size;
+    color: $blue;
+    padding: $s-size;
+}
+
+.add-to-do-error {
+    color: $off-white;
+    font-style: italic;
+    margin: $m-size 0 0 0;
+    padding: 0 $m-size;
+}
+
