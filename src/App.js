@@ -3,6 +3,7 @@ import Header from './components/Header';
 import ToDos from './components/ToDos';
 import AddToDo from './components/AddToDo';
 import CompletedModal from './components/CompletedModal';
+import 'normalize.css/normalize.css'
 
 
 class App extends React.Component {
@@ -24,13 +25,14 @@ class App extends React.Component {
   };
   handleCompletedModal = (toDo) => {
     this.setState(() => ({
-      tempCompletedToDo: toDo,
-      isCompletedModalOpen: true
+      isCompletedModalOpen: true,
+      tempCompletedToDo: toDo
     }));
-  };
+  }
   closeCompletedModal = () => {
     this.setState(() => ({
-      isCompletedModalOpen: false
+      isCompletedModalOpen: false,
+      tempCompletedToDo: ''
     }));
   };
   handleCompleted = () => {
@@ -41,7 +43,7 @@ class App extends React.Component {
       tempCompletedToDo: ''
     }));
   };
-  componentDidMount() {
+  componentDidMount = () => {
     try {
       const json = localStorage.getItem('toDos');
       const toDos = JSON.parse(json);
@@ -53,7 +55,7 @@ class App extends React.Component {
 
     }
   };
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate = (prevProps, prevState) => {
     if (prevState.toDos.length !== this.state.toDos.length) {
       const json = JSON.stringify(this.state.toDos);
       localStorage.setItem('toDos', json);
@@ -73,6 +75,7 @@ class App extends React.Component {
           handleCompleted={this.handleCompleted}
           closeCompletedModal={this.closeCompletedModal}
           isCompletedModalOpen={this.state.isCompletedModalOpen}
+          tempCompletedToDo={this.state.tempCompletedToDo}
         />
       </div>
     )
