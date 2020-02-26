@@ -14,6 +14,10 @@
     padding: $s-size;
 }
 
+.add-to-do__input::placeholder {
+    color: lightslategray;
+}
+
 .add-to-do-error {
     color: $off-white;
     font-style: italic;
@@ -21,3 +25,13 @@
     padding: 0 $m-size;
 }
 
+@media (max-width: $mobile-breakPoint) {
+    .add-to-do {
+        flex-direction: column;
+    }
+
+    .add-to-do__input {
+        margin-right: none;
+        margin: 0 0 $s-size 0;
+    }
+}

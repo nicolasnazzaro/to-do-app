@@ -8,7 +8,7 @@ const ToDos = (props) => (
         <h3 className="widget-header__title">Your To-Dos</h3>
         </div>
         <div>
-            {props.items.length === 0 && <p className="widget__message">You don't have any to-do in your list</p>}
+            {props.items.length === 0 && <p className="widget__message">You don't have any task in your list</p>}
             {
                 props.items.map((item, i) => (
                     <ToDo 

@@ -21,7 +21,7 @@ class AddToDo extends React.Component {
             <div>
                 {this.state.error && <p className="add-to-do-error">{this.state.error}</p>}
                 <form onSubmit={this.handleAddToDo} className="add-to-do">
-                    <input type="text" className="add-to-do__input" name="newToDo" />
+                    <input type="text" className="add-to-do__input" name="newToDo" placeholder="Enter a new task"/>
                     <button className="button">Add To-Do</button>
                 </form>
             </div>

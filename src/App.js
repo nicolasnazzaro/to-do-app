@@ -15,9 +15,9 @@ class App extends React.Component {
   }
   handleAddToDo = (toDo) => {
     if (!toDo) {
-      return 'Enter valid value to add a To-Do';
+      return 'Enter valid value to add a new task';
     } else if (this.state.toDos.indexOf(toDo) > -1) {
-      return 'This to-do already exists';
+      return 'This task already exists';
     }
 
     this.setState((prevState) => ({
